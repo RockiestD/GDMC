@@ -1,0 +1,149 @@
+*{
+    margin: 0 auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    width: 100%;
+}
+
+.cima{
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.baixo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.texto{
+    flex: 70%;
+}
+
+.imagem{
+    flex: 30%;
+}
+
+.imagem img{
+    width: 550px;
+}
+
+p{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+/* Configurações do carrossel */
+
+.carousel-container {
+    position: relative;
+    width: 500px;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,1);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+button.prev {
+    left: 15px;
+}
+
+button.next {
+    right: 15px;
+}
+
+.carousel-dots {
+    text-align: center;
+    padding: 15px 0px;
+    background-color: #fff;
+}
+
+.carousel-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-dots .dot.active {
+    background-color: #717171;
+}
+
+@media screen and (max-width:480px) {
+    body{
+        flex-direction: column;
+    }
+
+    .carousel-container{
+        width: 300px;
+        margin-top: 20px;
+    }
+    
+    .titulo{
+        font-size: 25px;
+    }
+
+    .baixo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .texto{
+        flex: 70%;
+    }
+
+    .texto p{
+        font-size: 22px;
+    }
+
+    .imagem{
+        flex: 30%;
+    }
+
+}

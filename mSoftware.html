@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="cssmontando.css">
+    <script src="https://kit.fontawesome.com/99451e1fb0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="cima">
+            <div class="logo">
+                <img src="LOGOGDMC.png" alt="logo do blog">
+            </div>
+        </div>
+        <div class="baixo">
+
+            <input type="checkbox" id="bt_menu" >
+            <label for="bt_menu">&#9776;</label>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i>&nbsp;Início</a>
+                        <ul>
+                            <li><a href="index.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Início</a></li>
+                            <li><a href="indice.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Índice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-question"></i>&nbsp;Conhecendo</a>
+                        <ul>
+                            <li><a href="cferramentas.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Ferramentas</a></li>
+                            <li><a href="cpecas.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Peças</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-exclamation"></i>&nbsp;Preparação</a>
+                        <ul>
+                            <li><a href="pAmbiente.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Ambiente</a></li>
+                            <li><a href="pVestimenta.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Vestimenta</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-wrench"></i>&nbsp;Montando</a>
+                        <ul>
+                            <li><a href="mHardware.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Hardware</a></li>
+                            <li><a href="mSoftware.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Software</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-language"></i>&nbsp;Idioma</a>
+                        <ul>
+                            <li><a href="index.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Português</a></li>
+                            <li><a href="start.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="seletor">
+            <div class="menuSeletor">
+                <a href="ligando.html" target="principal">Ligando o computador</a>
+            </div>
+            <div class="menuSeletor">
+                <a href="bios.html" target="principal">Acessando a BIOS/UEFI</a>
+            </div>
+            <div class="menuSeletor">
+                <a href="so.html" target="principal">Instalando o SO</a>
+            </div>
+            <div class="menuSeletor">
+                <a href="drivers.html" target="principal">Instalando drivers</a>
+            </div>
+            <div class="menuSeletor">
+                <a href="testeso.html" target="principal">Testando e configurando</a>
+            </div>
+        </div>
+        <div class="conteudo">
+            <iframe name="principal" src="ligando.html">
+        </div>
+        </iframe>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Topo</button>
+    </main>
+    <footer>
+        <script src="jsmontando.js"></script>
+    </footer>
+</body>
+
+</html>

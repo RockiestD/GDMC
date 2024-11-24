@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia definitivo de montagem de computadores</title>
+    <link rel="stylesheet" href="index.html">
+    <script src="https://kit.fontawesome.com/99451e1fb0.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            color: #ffffff;
+            flex-direction: column;
+        }
+
+        .cima {
+            flex: 20%;
+            background-color: white;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .cima img {
+            height: 70px;
+            width: 100px;
+        }
+
+        .baixo {
+            flex: 80%;
+            width: 80%;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .menu {
+            text-align: center;
+        }
+
+        .menu ul {
+            list-style: none;
+            position: relative;
+        }
+
+        .menu ul li {
+            width: 240px;
+            float: left;
+        }
+
+        .menu ul li a {
+            box-sizing: border-box;
+            padding: 0px 0px;
+        }
+
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul ul li {
+            float: none;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu a {
+            font-size: 30px;
+            color: #ffffff;
+            margin-top: 10px;
+            text-decoration: none;
+            box-sizing: border-box;
+            border: none;
+            padding: 5px 45px;
+            background-color: #4D4D4D;
+            overflow: hidden;
+        }
+
+        .menu a:hover {
+            cursor: pointer;
+        }
+
+        .submenu a {
+            display: none;
+            font-size: 30px;
+            box-sizing: border-box;
+            position: absolute;
+            width: 200px;
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 5px;
+        }
+
+        label[for=”bt_menu”] {
+            padding: 5px;
+            background-color: #222;
+            color: #fff;
+            font-family: Arial;
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            height: 50px;
+        }
+
+        #bt_menu {
+            display: none;
+        }
+
+        label {
+            display: none;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            background-color: #4D4D4D;
+            color: white;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+
+        main h2 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        main p {
+            font-size: 25px;
+        }
+
+        main div {
+            flex: 50%;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 90px;
+        }
+
+        @media screen and (max-width: 480px) {
+
+            header {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 115px;
+                font-size: 40px;
+                align-items: center;
+            }
+
+            .cima {
+                flex: 20%;
+                width: 100%;
+            }
+
+            label {
+                display: block;
+                text-align: center;
+                width: 100px;
+                font-size: 50px;
+            }
+
+            #bt_menu:checked~.menu {
+                margin-left: 0;
+            }
+
+            .menu {
+                margin-top: 210px;
+                margin-left: -120%;
+                transition: all .1s;
+                background: #4d4d4d;
+            }
+
+            .menu ul li {
+                width: 100%;
+                float: none;
+                background: #313131;
+                padding: 20px 10px;
+                font-size: 30px;
+            }
+
+            .menu ul li a {
+                background-color: #313131;
+            }
+
+            .menu ul ul{
+                position: static;
+                overflow: hidden;
+                max-height: 0;
+                transition: all 2s;
+                background: #313131;
+                align-items: center;
+            }
+
+            .menu ul li:hover ul {
+                height: auto;
+                max-height: 300px;
+                background: #313131;
+            }
+
+            .menu ul ul{
+                align-items: center;
+            }
+
+            main div {
+                margin-bottom: 10px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="cima">
+            <div class="logo">
+                <img src="LOGOGDMC.png" alt="logo do blog">
+            </div>
+        </div>
+        <div class="baixo">
+            <input type="checkbox" id="bt_menu">
+            <label for="bt_menu">&#9776;</label>
+
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i>&nbsp;Início</a>
+                        <ul>
+                            <li><a href="index.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Início</a></li>
+                            <li><a href="indice.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Índice</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-question"></i>Conhecendo</a>
+                        <ul>
+                            <li><a href="cferramentas.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Ferramentas</a></li>
+                            <li><a href="cpecas.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Peças</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-exclamation"></i>&nbsp;Preparação</a>
+                        <ul>
+                            <li><a href="pAmbiente.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Ambiente</a></li>
+                            <li><a href="pVestimenta.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Vestimenta</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-wrench"></i>&nbsp;Montando</a>
+                        <ul>
+                            <li><a href="mHardware.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Hardware</a></li>
+                            <li><a href="mSoftware.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Software</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-language"></i>&nbsp;Idioma</a>
+                        <ul>
+                            <li><a href="index.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;Português</a></li>
+                            <li><a href="start.html" class="submenu"><i class="fa-solid fa-arrow-right"></i> &nbsp;English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <div>
+            <h2>
+                <i class="fas fa-question"></i>
+                Conhecendo
+            </h2>
+            <p>
+                Na aba conhecendo, você descobre mais sobre cada peça, entende como elas funcionam e qual seu papel
+                dentro do computador.
+            </p>
+        </div>
+        <div>
+            <h2>
+                <i class="fas fa-exclamation"></i>
+                Preparação
+            </h2>
+            <p>
+                Na aba preparação, você prepara o ambiente para a montagem de seu computador.
+            </p>
+        </div>
+        <div>
+            <h2>
+                <i class="fas fa-wrench"></i>
+                Montando
+            </h2>
+            <p>
+                Aqui você põe a mão na massa e finalmente começa a montagem da sua máquina.
+            </p>
+        </div>
+        <div>
+            <h2>
+                <i class="fas fa-language"></i>
+                Idioma
+            </h2>
+            <p>
+                O site suporta dois Idiomas: Inglês e Português. Use esta opção para alternar a língua natural do
+                site.
+            </p>
+        </div>
+    </main>
+    <script src="js.genese.js"></script>
+</body>
+
+</html>
